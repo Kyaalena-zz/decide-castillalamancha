@@ -30,6 +30,8 @@ en:
             proposal_edit_before_minutes: Proposals can be edited by authors before this many minutes passes
             proposal_limit: Proposal limit per user
             vote_limit: Vote limit per user
+            banner: banner
+            banner_link: Link of banner
           step:
             announcement: Announcement
             comments_blocked: Comments blocked
