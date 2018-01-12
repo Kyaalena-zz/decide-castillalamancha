@@ -9,7 +9,8 @@ module Decidim
         boolean: :check_box,
         integer: :number_field,
         string: :text_field,
-        text: :text_area
+        text: :text_area,
+        image: :file_field
       }.freeze
 
       # Public: Renders a form field that matches a settings attribute's
