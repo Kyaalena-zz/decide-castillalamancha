@@ -79,7 +79,7 @@ module Decidim
         integer: { klass: Integer, default: 0 },
         string: { klass: String, default: nil },
         text: { klass: String, default: nil },
-        image: { klass: BannerUploader, default: nil }
+        image: { klass: String, default: nil }
       }.freeze
 
       attribute :type, Symbol, default: :boolean
