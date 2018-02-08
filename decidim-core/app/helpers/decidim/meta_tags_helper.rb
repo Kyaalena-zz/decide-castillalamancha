@@ -16,6 +16,8 @@ module Decidim
       add_decidim_meta_url(tags[:url])
       add_decidim_meta_twitter_handler(tags[:twitter_handler])
       add_decidim_meta_image_url(tags[:image_url])
+      add_decidim_meta_fb_appid(tags[:fb_appid])
+
     end
 
     # Public: Accumulates the given `title` so that they can be chained. Since Rails views
@@ -48,7 +50,7 @@ module Decidim
     end
 
     attr_reader :decidim_meta_description, :decidim_meta_url, :decidim_meta_image_url,
-                :decidim_meta_twitter_handler
+                :decidim_meta_twitter_handler, :decidim_meta_fb_appid
 
     # Sets the meta description for the current page. We want to keep the most specific
     # one, so you cannot replace the description if it is set by a view that has already
@@ -99,7 +101,21 @@ module Decidim
     #
     # Returns nothing.
     def add_decidim_meta_image_url(image_url)
-      @decidim_meta_image_url ||= image_url
+      @decidim_meta_image_url ||= "#{current_organization.official_url}#{image_url}"
+    end
+
+    # Sets the meta image URL for the current page. We want to keep the most specific
+    # one, so you cannot replace the image URL if it is set by a view that has already
+    # been rendered. Remember that Rails's views are render inside-out, so the `layout`
+    # is the last one to be rendered. You can put there a basic content and override it
+    # in other layers.
+    #
+    # fb_appid - The String to be set as facebook id
+    #
+    # Returns nothing.
+
+    def add_decidim_meta_fb_appid(fb_appid)
+      @decidim_meta_fb_appid ||= fb_appid
     end
   end
 end
