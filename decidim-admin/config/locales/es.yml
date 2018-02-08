@@ -32,6 +32,7 @@ es:
         official_img_footer: Logotipo oficial de pie de página
         official_img_header: Logotipo oficial de cabecera
         official_url: URL oficial de la organización
+        fb_appid: Facebook ID de la aplicación
         show_statistics: Mostrar estadísticas
         welcome_text: Texto de bienvenida
       scope:
