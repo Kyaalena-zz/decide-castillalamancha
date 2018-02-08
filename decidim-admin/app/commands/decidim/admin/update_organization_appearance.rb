@@ -55,7 +55,7 @@ module Decidim
           remove_logo: form.remove_logo,
           banner: form.banner,
           remove_banner: form.remove_banner,
-          banner_link: form.banner_link,        
+          banner_link: form.banner_link,
           favicon: form.favicon,
           remove_favicon: form.remove_favicon,
           official_img_header: form.official_img_header,
@@ -63,6 +63,7 @@ module Decidim
           official_img_footer: form.official_img_footer,
           remove_official_img_footer: form.remove_official_img_footer,
           official_url: form.official_url,
+          fb_appid: form.fb_appid,
           show_statistics: form.show_statistics
         }.tap do |attributes|
           if Decidim.enable_html_header_snippets
