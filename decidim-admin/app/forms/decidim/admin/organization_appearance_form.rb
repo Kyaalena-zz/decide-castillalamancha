@@ -24,6 +24,7 @@ module Decidim
       attribute :official_img_footer
       attribute :remove_official_img_footer
       attribute :official_url
+      attribute :fb_appid
       attribute :show_statistics, Boolean
       attribute :header_snippets, String
       attribute :cta_button_path, String
