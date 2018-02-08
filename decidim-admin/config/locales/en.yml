@@ -32,6 +32,7 @@ en:
         official_img_footer: Official logo footer
         official_img_header: Official logo header
         official_url: Official organization URL
+        fb_appid: Facebook ID of the application 
         show_statistics: Show statistics
         welcome_text: Welcome text
       scope:
